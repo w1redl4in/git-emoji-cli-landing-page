@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 export function Layout({ children }: LayoutProps) {
   return (
-    <Flex position="relative" flexDir="column" minH="100vh">
+    <Flex flexDir="column" minH="100vh">
       <Navbar />
       <Hero />
       {children}
