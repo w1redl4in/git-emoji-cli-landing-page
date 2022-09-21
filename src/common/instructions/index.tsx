@@ -6,12 +6,12 @@ export function Instructions() {
       id="instructions"
       w="100%"
       margin="auto"
-      h="50vh"
+      minH="50vh"
       alignItems="center"
       flexDir="column"
-      borderBottom="1px solid black"
+      justifyContent="space-around"
     >
-      <VStack spacing="1rem">
+      <VStack mt="5rem" spacing="1rem">
         <VStack spacing="1rem">
           <Heading>Como usar</Heading>
           <Text>Instalação:</Text>
