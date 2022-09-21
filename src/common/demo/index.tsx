@@ -7,6 +7,7 @@ export function Demo() {
       alignItems="center"
       justifyContent="space-around"
       minH="100vh"
+      id="demo"
     >
       <VStack color="white" textAlign="center">
         <Heading>

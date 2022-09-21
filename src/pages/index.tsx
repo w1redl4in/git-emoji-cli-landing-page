@@ -1,13 +1,13 @@
 import React from "react";
 import { Demo } from "../common/demo";
 import { Instructions } from "../common/instructions";
-import { WhyUse } from "../common/why-use";
+import { Features } from "../common/features";
 import { Layout } from "../_layout";
 export default function Home() {
   return (
     <Layout>
       <Demo />
-      <WhyUse />
+      <Features />
       <Instructions />
     </Layout>
   );

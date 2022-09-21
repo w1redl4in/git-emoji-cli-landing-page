@@ -1,33 +1,37 @@
 import { Flex, Heading, List, ListIcon, ListItem } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
-export function WhyUse() {
+export function Features() {
   return (
     <Flex
       alignItems="center"
       justifyContent="space-around"
+      id="features"
+      alignSelf="center"
       h="50vh"
+      maxW="70%"
+      w="100%"
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
-      <Heading textAlign="center" fontSize="5xl">
-        Por que <br /> usar?
+      <Heading textAlign="center" fontSize="7xl">
+        Features
       </Heading>
       <List spacing={3}>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          Possibilidade de adicionar escopo do commit
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Assumenda, quia temporibus eveniet a libero incidunt suscipit
+          Lista com 20+ commits customizados
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+          Possibilidade de buscar commit digitando
         </ListItem>
         <ListItem>
           <ListIcon as={CheckIcon} color="green.500" />
-          Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+          Notifica processos pós-commit como testes
         </ListItem>
       </List>
     </Flex>
