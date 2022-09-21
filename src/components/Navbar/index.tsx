@@ -4,7 +4,7 @@ export function Navbar() {
   return (
     <Flex
       position="absolute"
-      backdropFilter="blur(2rem)"
+      backdropFilter="blur(4px)"
       zIndex={99}
       top={0}
       width="100%"
