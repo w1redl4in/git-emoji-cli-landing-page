@@ -10,6 +10,7 @@ import {
   Heading,
   Link,
   useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 
 type NavbarMobileDrawerProps = {
@@ -21,19 +22,18 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
   return (
     <Drawer placement="top" size="full" isOpen={isOpen} onClose={onClose}>
       <DrawerOverlay />
-      <DrawerContent bg="transparent" backdropFilter="blur(30px)">
+      <DrawerContent color="white" bg="transparent" backdropFilter="blur(30px)">
         <DrawerCloseButton color="white" />
 
-        <Flex
-          h="100vh"
-          color="white"
-          justifyContent="center"
-          alignItems="center"
-          flexDir="column"
-        >
-          <DrawerHeader>Git Emoji CLI</DrawerHeader>
-          <DrawerBody>
-            <Flex>
+        <DrawerHeader>Git Emoji CLI</DrawerHeader>
+        <DrawerBody>
+          <Flex
+            h="100vh"
+            alignItems="center"
+            flexDir="column"
+            justifyContent="center"
+          >
+            <VStack spacing="10">
               <Link
                 target="_blank"
                 href="https://github.com/w1redl4in/git-emoji-cli"
@@ -46,9 +46,9 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
               >
                 NPM
               </Link>
-            </Flex>
-          </DrawerBody>
-        </Flex>
+            </VStack>
+          </Flex>
+        </DrawerBody>
       </DrawerContent>
     </Drawer>
   );
