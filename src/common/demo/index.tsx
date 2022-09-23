@@ -3,14 +3,14 @@ import { Flex, Heading, Image, VStack, Text } from "@chakra-ui/react";
 export function Demo() {
   return (
     <Flex
-      bg="#1E1D2F"
       alignItems="center"
       justifyContent="space-around"
       minH="100vh"
       id="demo"
       flexDir="column"
+      borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
-      <VStack color="white" textAlign="center">
+      <VStack textAlign="center">
         <Heading>
           Uma demonstração rápida <br /> e prática de como <br /> o
           git-emoji-cli te ajuda
