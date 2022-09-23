@@ -22,7 +22,7 @@ export function Demo() {
         </Text>
       </VStack>
       <Image
-        maxW="10rem"
+        maxW="40rem"
         w="100%"
         height="auto"
         boxShadow="inner"
