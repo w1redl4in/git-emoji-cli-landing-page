@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carefully-coded/react-text-gradient": "^1.0.6",
     "@chakra-ui/icons": "^2.0.10",
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/arimo": "^4.5.9",
+    "@fontsource/dangrek": "^4.5.10",
+    "@fontsource/karla": "^4.5.9",
     "framer-motion": "^6",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-gradient-text": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
