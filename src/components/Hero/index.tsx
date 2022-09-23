@@ -51,7 +51,7 @@ export function Hero() {
         backgroundSize="cover"
         backgroundImage="url('new-hero.jpg')"
         textAlign="center"
-        h="100vh"
+        minH="100vh"
         _before={{
           content: '" "',
           position: "absolute",
