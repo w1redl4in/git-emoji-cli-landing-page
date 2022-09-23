@@ -1,4 +1,5 @@
 import { Flex, Heading, Image, VStack, Text } from "@chakra-ui/react";
+import { GradientText } from "../../components/GradientText";
 
 export function Demo() {
   return (
@@ -13,7 +14,15 @@ export function Demo() {
       <VStack textAlign="center">
         <Heading>
           Uma demonstração rápida <br /> e prática de como <br /> o
-          git-emoji-cli te ajuda
+          <GradientText
+            animate
+            animateDuration={1000}
+            fromTo={["#C15CFF", "#FF5454"]}
+            type="linear"
+          >
+            &nbsp;git-emoji-cli&nbsp;
+          </GradientText>
+          te ajuda
         </Heading>
         <Text>
           Não se esqueça que você <br />
