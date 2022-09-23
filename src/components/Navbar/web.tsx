@@ -1,4 +1,5 @@
 import { Flex, Heading, Link } from "@chakra-ui/react";
+import { GradientText } from "../GradientText";
 
 export function NavbarWeb() {
   return (
@@ -18,21 +19,30 @@ export function NavbarWeb() {
         alignItems="center"
       >
         <Link target="_blank" href="https://felipeaustriaco.dev">
-          Quem desenvolveu?
+          contribuidores.
         </Link>
         <Link target="_blank" href="https://github.com/w1redl4in/git-emoji-cli">
-          Github
+          github.
         </Link>
         <Link
           target="_blank"
           href="https://www.npmjs.com/package/git-emoji-cli"
         >
-          NPM
+          npm.
         </Link>
-        <Heading>Git Emoji Cli</Heading>
-        <Link href="#demo">Demo</Link>
-        <Link href="#whyuse">Porque usar</Link>
-        <Link href="#instructions">Instruções</Link>
+        <Heading>
+          <GradientText
+            animate
+            animateDuration={1000}
+            fromTo={["#C15CFF", "#FF5454"]}
+            type="linear"
+          >
+            Git Emoji CLI
+          </GradientText>
+        </Heading>
+        <Link href="#demo">demo.</Link>
+        <Link href="#whyuse">features.</Link>
+        <Link href="#instructions">instruções.</Link>
       </Flex>
     </Flex>
   );
