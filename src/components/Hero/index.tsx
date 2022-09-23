@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, VStack } from "@chakra-ui/react";
 import { useEffect, useMemo, useState } from "react";
+import { GradientText } from "../GradientText";
 export function Hero() {
   const [index, setIndex] = useState(0);
 
@@ -69,7 +70,17 @@ export function Hero() {
             <Heading fontSize="4xl" color="white">
               Cansado de fazer commits despadronizados <br /> e sem graça?
             </Heading>
-            <Heading color="white">Conheça o git-emoji-cli!</Heading>
+            <Heading color="white">
+              Conheça o
+              <GradientText
+                animate
+                animateDuration={1000}
+                fromTo={["#C15CFF", "#FF5454"]}
+                type="linear"
+              >
+                &nbsp;git-emoji-cli!
+              </GradientText>
+            </Heading>
             <Heading fontSize="9xl">{emojis[index]}</Heading>
           </VStack>
         </Box>
