@@ -8,6 +8,7 @@ export function Demo() {
       justifyContent="space-around"
       minH="100vh"
       id="demo"
+      flexDir="column"
     >
       <VStack color="white" textAlign="center">
         <Heading>
@@ -21,6 +22,9 @@ export function Demo() {
         </Text>
       </VStack>
       <Image
+        maxW="10rem"
+        w="100%"
+        height="auto"
         boxShadow="inner"
         borderRadius="1rem"
         src="git-emoji-cli.gif"
