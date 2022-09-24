@@ -12,7 +12,7 @@ export function Demo() {
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
       <VStack textAlign="center">
-        <Heading>
+        <Heading fontSize={["4xl", "4xl", "4xl", "6xl"]}>
           Uma demonstração rápida <br /> e prática de como <br /> o
           <GradientText
             animate

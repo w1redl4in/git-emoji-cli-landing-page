@@ -14,7 +14,7 @@ export function Features() {
       w="100%"
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
-      <Heading textAlign="center" fontSize="7xl">
+      <Heading textAlign="center" fontSize={["4xl", "4xl", "4xl", "6xl"]}>
         Features
       </Heading>
       <List spacing={3}>
