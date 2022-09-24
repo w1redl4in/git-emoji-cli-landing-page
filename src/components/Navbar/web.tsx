@@ -28,7 +28,7 @@ export function NavbarWeb() {
             fromTo={["#C15CFF", "#FF5454"]}
             type="linear"
           >
-            Git Emoji CLI
+            git-emoji-cli
           </GradientText>
         </Heading>
         <Link href="#collaborators">contribuidores.</Link>
