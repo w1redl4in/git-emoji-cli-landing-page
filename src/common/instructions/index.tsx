@@ -13,7 +13,7 @@ export function Instructions() {
       w="100%"
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
-      <Heading textAlign="center" fontSize="6xl">
+      <Heading textAlign="center" fontSize={["4xl", "4xl", "4xl", "6xl"]}>
         Ficou curioso? <br />
         Deu vontade de experimentar? <br />É super rápido!
       </Heading>
@@ -38,30 +38,5 @@ export function Instructions() {
         </VStack>
       </VStack>
     </Flex>
-    // <Center
-    //   id="instructions"
-    //   w="100%"
-    //   margin="auto"
-    //   minH="50vh"
-    //   alignItems="center"
-    //   flexDir="column"
-    //   justifyContent="space-around"
-    // >
-    //   <VStack mt="5rem" spacing="1rem">
-    //     <VStack spacing="1rem">
-    //       <Heading>Como usar</Heading>
-    //       <Text>Instalação:</Text>
-    //       <Code borderRadius="0.2rem" p="1rem">
-    //         $ npm i -g git-emoji-cli <br /> $ gec
-    //       </Code>
-    //     </VStack>
-    //   </VStack>
-    //   <VStack spacing="1rem">
-    //     <Text>Using with NPX</Text>
-    //     <Code borderRadius="0.2rem" p="1rem">
-    //       $ npx git-emoji-cli
-    //     </Code>
-    //   </VStack>
-    // </Center>
   );
 }
