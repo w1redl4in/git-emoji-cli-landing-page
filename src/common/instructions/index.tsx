@@ -1,7 +1,40 @@
-import { Code, Flex, Heading, VStack } from "@chakra-ui/react";
+import {
+  Code,
+  Flex,
+  Heading,
+  Tag,
+  Text,
+  useClipboard,
+  useToast,
+  VStack,
+} from "@chakra-ui/react";
+import { useCallback, useEffect, useState } from "react";
 import { GradientText } from "../../components/GradientText";
 
 export function Instructions() {
+  const [clipboardValue, setClipboardValue] = useState("");
+  const { onCopy, hasCopied } = useClipboard(clipboardValue);
+  const toast = useToast();
+
+  const handleClipboard = useCallback(
+    async (value: string) => {
+      setClipboardValue(value);
+      onCopy();
+    },
+    [onCopy]
+  );
+
+  useEffect(() => {
+    if (hasCopied) {
+      toast.closeAll();
+      toast({
+        title: `${clipboardValue} foi copiado com sucesso!`,
+        variant: "solid",
+        colorScheme: "green",
+      });
+    }
+  }, [clipboardValue, hasCopied, toast]);
+
   return (
     <Flex
       alignItems="center"
@@ -31,17 +64,55 @@ export function Instructions() {
             Instalando globalmente <br /> na sua máquina!
           </Heading>
 
-          <Code w="100%" borderRadius="0.2rem" p="1rem">
-            $ npm i -g git-emoji-cli // Instala o pacote na sua máquina <br /> $
-            gec // Executa o pacote
+          <Code
+            minW="100%"
+            borderRadius="0.2rem"
+            p="2.2rem 2rem"
+            textAlign="left"
+            colorScheme="gray"
+            position="relative"
+          >
+            <Text>
+              $ npm i -g git-emoji-cli
+              <br /> $ gec
+            </Text>
+            <Tag
+              cursor="pointer"
+              variant="solid"
+              colorScheme="green"
+              position="absolute"
+              top="2"
+              right="2"
+              onClick={() => handleClipboard("npm i -g git-emoji-cli")}
+            >
+              Copiar
+            </Tag>
           </Code>
         </VStack>
 
         <VStack spacing="1.5rem">
           <Heading fontSize="2xl">Usando com NPX</Heading>
 
-          <Code w="100%" borderRadius="0.2rem" p="1rem">
-            $ npx git-emoji-cli // Executa sem instalar o pacote
+          <Code
+            minW="100%"
+            borderRadius="0.2rem"
+            p="2.2rem 2rem"
+            textAlign="left"
+            colorScheme="gray"
+            position="relative"
+          >
+            <Text>$ npx git-emoji-cli</Text>
+            <Tag
+              cursor="pointer"
+              variant="solid"
+              colorScheme="green"
+              position="absolute"
+              top="2"
+              right="2"
+              onClick={() => handleClipboard("npx git-emoji-cli")}
+            >
+              Copiar
+            </Tag>
           </Code>
         </VStack>
       </VStack>
