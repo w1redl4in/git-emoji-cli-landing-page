@@ -67,10 +67,10 @@ export function Hero() {
       >
         <Box position="absolute" top="calc(50% - 80px)">
           <VStack spacing="10">
-            <Heading fontSize="4xl" color="white">
+            <Heading fontSize={["2xl", "2xl", "4xl", "6xl"]} color="white">
               Cansado de fazer commits despadronizados <br /> e sem graça?
             </Heading>
-            <Heading color="white">
+            <Heading color="white" fontSize={["2xl", "2xl", "4xl", "6xl"]}>
               Conheça o
               <GradientText
                 animate
