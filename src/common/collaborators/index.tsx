@@ -1,5 +1,6 @@
 import { Flex, Heading, Image, Link, Text, VStack } from "@chakra-ui/react";
 import { useMemo } from "react";
+import { GradientText } from "../../components/GradientText";
 
 export function Collaborators() {
   const collaborators = useMemo(
@@ -26,12 +27,22 @@ export function Collaborators() {
 
   return (
     <Flex
+      id="collaborators"
       minH="100vh"
       flexDir="column"
       alignItems="center"
       justifyContent="space-around"
     >
-      <Heading fontSize={["4xl", "4xl", "4xl", "6xl"]}>Colaboradores</Heading>
+      <Heading fontSize={["4xl", "4xl", "4xl", "6xl"]}>
+        <GradientText
+          animate
+          animateDuration={1000}
+          fromTo={["#8A2EFF", "#CCE0FF"]}
+          type="linear"
+        >
+          Colaboradores
+        </GradientText>
+      </Heading>
 
       <Flex
         maxW="70%"

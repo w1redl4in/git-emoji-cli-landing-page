@@ -1,4 +1,5 @@
 import { Code, Flex, Heading, VStack } from "@chakra-ui/react";
+import { GradientText } from "../../components/GradientText";
 
 export function Instructions() {
   return (
@@ -14,8 +15,15 @@ export function Instructions() {
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
       <Heading textAlign="center" fontSize={["4xl", "4xl", "4xl", "6xl"]}>
-        Ficou curioso? <br />
-        Deu vontade de experimentar? <br />É super rápido!
+        <GradientText
+          animate
+          animateDuration={1000}
+          fromTo={["#1AA37A", "#9DFFB3"]}
+          type="linear"
+        >
+          Ficou curioso? <br />
+          Deu vontade de experimentar? <br />É super rápido! 🏃‍♀️
+        </GradientText>
       </Heading>
       <VStack spacing="1rem" textAlign="center">
         <VStack spacing="1.5rem">

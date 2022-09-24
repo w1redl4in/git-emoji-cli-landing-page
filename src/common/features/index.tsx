@@ -1,5 +1,6 @@
 import { Flex, Heading, List, ListIcon, ListItem } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import { GradientText } from "../../components/GradientText";
 
 export function Features() {
   return (
@@ -15,7 +16,14 @@ export function Features() {
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
       <Heading textAlign="center" fontSize={["4xl", "4xl", "4xl", "6xl"]}>
-        Features
+        <GradientText
+          animate
+          animateDuration={1000}
+          fromTo={["#FFC2C2", "#FFD7A8"]}
+          type="linear"
+        >
+          Features ✨
+        </GradientText>
       </Heading>
       <List spacing={3}>
         <ListItem>
