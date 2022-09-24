@@ -31,9 +31,15 @@ export function Collaborators() {
       alignItems="center"
       justifyContent="space-around"
     >
-      <Heading fontSize="5xl">Colaboradores</Heading>
+      <Heading fontSize={["4xl", "4xl", "4xl", "6xl"]}>Colaboradores</Heading>
 
-      <Flex mb="5" w="100%" justifyContent="space-around" flexWrap="wrap">
+      <Flex
+        maxW="70%"
+        w="100%"
+        mb="5"
+        justifyContent="space-around"
+        flexWrap="wrap"
+      >
         {collaborators.map((collaborator) => (
           <VStack key={collaborator.name}>
             <Image
