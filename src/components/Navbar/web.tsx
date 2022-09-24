@@ -18,18 +18,9 @@ export function NavbarWeb() {
         justifyContent="space-around"
         alignItems="center"
       >
-        <Link target="_blank" href="https://felipeaustriaco.dev">
-          contribuidores.
-        </Link>
-        <Link target="_blank" href="https://github.com/w1redl4in/git-emoji-cli">
-          github.
-        </Link>
-        <Link
-          target="_blank"
-          href="https://www.npmjs.com/package/git-emoji-cli"
-        >
-          npm.
-        </Link>
+        <Link href="#demo">demo.</Link>
+        <Link href="#features">features.</Link>
+        <Link href="#instructions">instruções.</Link>
         <Heading>
           <GradientText
             animate
@@ -40,9 +31,16 @@ export function NavbarWeb() {
             Git Emoji CLI
           </GradientText>
         </Heading>
-        <Link href="#demo">demo.</Link>
-        <Link href="#whyuse">features.</Link>
-        <Link href="#instructions">instruções.</Link>
+        <Link href="#collaborators">contribuidores.</Link>
+        <Link target="_blank" href="https://github.com/w1redl4in/git-emoji-cli">
+          github.
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.npmjs.com/package/git-emoji-cli"
+        >
+          npm.
+        </Link>
       </Flex>
     </Flex>
   );
