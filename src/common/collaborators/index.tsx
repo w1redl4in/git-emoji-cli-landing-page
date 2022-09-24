@@ -54,6 +54,7 @@ export function Collaborators() {
         {collaborators.map((collaborator) => (
           <VStack key={collaborator.name}>
             <Image
+              filter="drop-shadow(0 0 0.2rem crimson)"
               maxW="20rem"
               w="100%"
               h="auto"
