@@ -13,7 +13,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { GradientText } from "../GradientText";
 
 type NavbarMobileDrawerProps = {
@@ -22,6 +22,8 @@ type NavbarMobileDrawerProps = {
 };
 
 function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
+  const finalRef = useRef(null);
+
   const links = useMemo(
     () => [
       {
@@ -52,8 +54,18 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
     []
   );
 
+  const handleOnClickOnLink = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
   return (
-    <Drawer placement="top" size="full" isOpen={isOpen} onClose={onClose}>
+    <Drawer
+      finalFocusRef={finalRef}
+      placement="top"
+      size="full"
+      isOpen={isOpen}
+      onClose={onClose}
+    >
       <DrawerOverlay />
       <DrawerContent color="white" bg="transparent" backdropFilter="blur(30px)">
         <DrawerCloseButton color="white" />
@@ -77,7 +89,11 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
           >
             <VStack spacing="10">
               {links.map((link) => (
-                <Link key={link.name} href={link.url}>
+                <Link
+                  onClick={handleOnClickOnLink}
+                  key={link.name}
+                  href={link.url}
+                >
                   {link.name}
                 </Link>
               ))}
