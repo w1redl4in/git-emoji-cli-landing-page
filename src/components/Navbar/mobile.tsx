@@ -135,7 +135,7 @@ export function NavbarMobile() {
             git-emoji-cli
           </GradientText>
         </Heading>
-        <Button colorScheme="blackAlpha" onClick={onOpen}>
+        <Button colorScheme="whiteAlpha" onClick={onOpen}>
           <HamburgerIcon />
         </Button>
       </Flex>
