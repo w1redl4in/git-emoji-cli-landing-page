@@ -11,7 +11,6 @@ export function Features() {
       id="features"
       alignSelf="center"
       minH="100vh"
-      maxW="70%"
       w="100%"
       borderBottom="1px solid rgba(000,000,000, 0.1)"
     >
