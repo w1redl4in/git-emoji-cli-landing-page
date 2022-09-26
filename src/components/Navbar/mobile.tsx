@@ -29,26 +29,32 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
       {
         name: "demo.",
         url: "#demo",
+        target: "_self",
       },
       {
         name: "features.",
         url: "#features",
+        target: "_self",
       },
       {
         name: "instruções.",
         url: "#instructions",
+        target: "_self",
       },
       {
-        name: "contribuidores.",
+        name: "colaboradores.",
         url: "#collaborators",
+        target: "_self",
       },
       {
         name: "github.",
         url: "https://github.com/w1redl4in/git-emoji-cli",
+        target: "_blank",
       },
       {
         name: "npm.",
         url: "https://www.npmjs.com/package/git-emoji-cli",
+        target: "_blank",
       },
     ],
     []
@@ -90,6 +96,7 @@ function NavbarMobileDrawer({ isOpen, onClose }: NavbarMobileDrawerProps) {
             <VStack spacing="10">
               {links.map((link) => (
                 <Link
+                  target={link.target}
                   onClick={handleOnClickOnLink}
                   key={link.name}
                   href={link.url}
