@@ -52,7 +52,7 @@ export function Hero() {
         backgroundSize="cover"
         backgroundImage="url('new-hero.jpg')"
         textAlign="center"
-        minH="100vh"
+        minH="calc(100vh + 80px)"
         _before={{
           content: '" "',
           position: "absolute",
@@ -65,11 +65,12 @@ export function Hero() {
             "linear-gradient(180deg,rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.9) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%)",
         }}
       >
-        <Box position="absolute" top="calc(50% - 80px)">
+        <Box position="absolute" top="35%">
           <VStack spacing="10">
             <Heading fontSize={["2xl", "2xl", "4xl", "6xl"]} color="white">
               Cansado de fazer commits despadronizados <br /> e sem graça?
             </Heading>
+            <br />
             <Heading color="white" fontSize={["2xl", "2xl", "4xl", "6xl"]}>
               Conheça o
               <GradientText
