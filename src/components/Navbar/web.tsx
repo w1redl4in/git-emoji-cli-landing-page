@@ -31,7 +31,7 @@ export function NavbarWeb() {
             git-emoji-cli
           </GradientText>
         </Heading>
-        <Link href="#collaborators">contribuidores.</Link>
+        <Link href="#collaborators">colaboradores.</Link>
         <Link target="_blank" href="https://github.com/w1redl4in/git-emoji-cli">
           github.
         </Link>
