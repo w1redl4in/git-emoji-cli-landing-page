@@ -14,7 +14,7 @@ export function NavbarWeb() {
     >
       <Flex
         m="0 auto"
-        width="60%"
+        width={["100%", "100%", "100%", "70%"]}
         justifyContent="space-around"
         alignItems="center"
       >
