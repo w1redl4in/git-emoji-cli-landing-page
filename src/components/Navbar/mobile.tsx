@@ -128,7 +128,7 @@ export function NavbarMobile() {
       <NavbarMobileDrawer isOpen={isOpen} onClose={onClose} />
       <Flex
         m="0 auto"
-        width="60%"
+        width="100%"
         justifyContent="space-around"
         alignItems="center"
       >
