@@ -54,15 +54,32 @@ export function Instructions() {
           type="linear"
         >
           Ficou curioso? <br />
-          Deu vontade de experimentar? <br />É super rápido! 🏃‍♀️
+          Deu vontade de experimentar? <br />É super rápido!
         </GradientText>
       </Heading>
-      <VStack spacing="1rem" textAlign="center">
+      <VStack spacing="5rem" textAlign="center">
         <VStack spacing="1.5rem">
           <Heading fontSize="2xl">
             Instalando globalmente <br /> na sua máquina!
           </Heading>
 
+          <Code
+            minW="100%"
+            borderRadius="0.5rem"
+            p="2.2rem 2rem"
+            textAlign="left"
+            colorScheme="gray"
+            position="relative"
+          >
+            <Text>$ npm i -g git-emoji-cli</Text>
+          </Code>
+        </VStack>
+
+        <VStack spacing="1.5rem">
+          <Heading fontSize="2xl">
+            Usando depois <br />
+            da instalação
+          </Heading>
           <Code
             minW="100%"
             borderRadius="0.2rem"
@@ -71,27 +88,12 @@ export function Instructions() {
             colorScheme="gray"
             position="relative"
           >
-            <Text>
-              $ npm i -g git-emoji-cli
-              <br /> $ gec
-            </Text>
-            <Tag
-              cursor="pointer"
-              variant="solid"
-              colorScheme="green"
-              position="absolute"
-              top="2"
-              right="2"
-              onClick={() => handleClipboard("npm i -g git-emoji-cli")}
-            >
-              Copiar
-            </Tag>
+            <Text>$ gec</Text>
           </Code>
         </VStack>
 
         <VStack spacing="1.5rem">
           <Heading fontSize="2xl">Usando com NPX</Heading>
-
           <Code
             minW="100%"
             borderRadius="0.2rem"
@@ -101,17 +103,6 @@ export function Instructions() {
             position="relative"
           >
             <Text>$ npx git-emoji-cli</Text>
-            <Tag
-              cursor="pointer"
-              variant="solid"
-              colorScheme="green"
-              position="absolute"
-              top="2"
-              right="2"
-              onClick={() => handleClipboard("npx git-emoji-cli")}
-            >
-              Copiar
-            </Tag>
           </Code>
         </VStack>
       </VStack>
