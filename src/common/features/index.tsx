@@ -21,7 +21,7 @@ export function Features() {
           fromTo={["#FFC2C2", "#FFD7A8"]}
           type="linear"
         >
-          Features ✨
+          Features
         </GradientText>
       </Heading>
       <List spacing={3}>
