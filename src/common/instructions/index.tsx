@@ -1,40 +1,8 @@
-import {
-  Code,
-  Flex,
-  Heading,
-  Tag,
-  Text,
-  useClipboard,
-  useToast,
-  VStack,
-} from "@chakra-ui/react";
-import { useCallback, useEffect, useState } from "react";
+import { Code, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+
 import { GradientText } from "../../components/GradientText";
 
 export function Instructions() {
-  const [clipboardValue, setClipboardValue] = useState("");
-  const { onCopy, hasCopied } = useClipboard(clipboardValue);
-  const toast = useToast();
-
-  const handleClipboard = useCallback(
-    async (value: string) => {
-      setClipboardValue(value);
-      onCopy();
-    },
-    [onCopy]
-  );
-
-  useEffect(() => {
-    if (hasCopied) {
-      toast.closeAll();
-      toast({
-        title: `${clipboardValue} foi copiado com sucesso!`,
-        variant: "solid",
-        colorScheme: "green",
-      });
-    }
-  }, [clipboardValue, hasCopied, toast]);
-
   return (
     <Flex
       alignItems="center"
