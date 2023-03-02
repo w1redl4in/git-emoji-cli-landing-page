@@ -16,7 +16,7 @@ export function Collaborators() {
       {
         name: "Vitor Delfino",
         type: "Commiter",
-        company: "Software Engineer @ Loft",
+        company: "Senior Software Engineer @ Nubank",
         peep: "vitao.svg",
         peepAlt: "Um peep que representa o Vitor",
         link: "https://vitordelfino.dev",
